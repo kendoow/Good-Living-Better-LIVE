@@ -1,0 +1,306 @@
+@import "variables.scss";
+@import "Mixins.scss";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type="search"] {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+
+}
+
+.header {
+    padding-top: 55px;
+}
+
+//Nav
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .header-nav {
+        display: flex;
+
+        .header-list {
+            display: flex;
+            align-items: center;
+
+            li {
+                @include Fonts-title(14px, 24px, #083C6E);
+                margin-right: 60px;
+                text-transform: uppercase;
+
+                &:hover,
+                :active,
+                :focus {
+                    border-bottom: 3px solid #083C6E;
+                }
+            }
+
+        }
+
+        a {
+            @include Buttons;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//Top(Good-live w/ armchair)
+.bg {
+    background: url(../img/Top-img.png) no-repeat;
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.top-intro {
+    padding-top: 212px;
+}
+
+.top-intro-wrapper-text {
+    max-width: 460px;
+
+    .top-intro-title {
+        @include Fonts-title(60px, 84px, #000000);
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+
+    .top-intro-subtitle {
+        @include Fonts-subtitle(18px, 28px, #B1B6CA);
+        padding-bottom: 23px;
+    }
+
+    .search-field {
+        padding: 20px 50px;
+        background-color: #F1F1F1;
+        align-items: center;
+        @include Fonts-title(16px, 28px, #747DA1)
+    }
+
+    .search-button {
+        @include search-button($button-bg, $padding-search);
+        @include Fonts-title(14px, 24px, #fff);
+        align-items: center;
+        width: 138px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: lighten($button-bg, $amount: 10)
+        }
+    }
+
+    .search-form {
+        padding-bottom: 250px;
+    }
+}
+
+//Menu
+.menu-price {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.menu-title {
+    @include Fonts-title($title-font-size, $title-line-height, $color-title-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 101px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+
+    .menu-item:not(:last-child){
+        padding-right: 20px;
+    }
+    .card-thumb{
+        box-shadow: 0px 7px 15px rgba(8, 60, 110, 0.1);
+    }
+}
+.menu-item-pic{
+    position: relative;       
+}
+.menu-item-text{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+.sale-button{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    @include button-sale;
+}
+.bottom-menu-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: $menu-item-bg;
+    width: 100%;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    .menu-item-name{
+        @include Fonts-title(20px,30px,#fff);
+        margin-left: 13px;
+        
+    }
+}
+.menu-item-price{
+    margin-right: 12px;
+    @include button-price
+}
+

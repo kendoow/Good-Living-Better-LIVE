@@ -1,0 +1,56 @@
+@mixin Fonts-button {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    color: $color-button-text;
+}
+@mixin Buttons {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    color: $color-button-text;
+    padding: 20px 50px;
+    background-color: $button-bg;
+    &:hover{
+        background-color:lighten($button-bg, $amount: 10)
+    }
+}
+@mixin Fonts-subtitle($subtitle-font-size,$subtitle-line-height,$color-subtitle){
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $subtitle-font-size;
+    line-height: $subtitle-line-height;
+    color: $color-subtitle;
+}
+@mixin Fonts-title($title-font-size,$title-line-height,$color-title-text){
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    color:$color-title-text;
+}
+@mixin search-button($button-bg,$padding-search) {
+    background-color: $button-bg;
+    padding: $padding-search ;
+}
+@mixin menu-item() {
+    background: $menu-item-bg;
+    position: $position;
+}
+@mixin button-sale {
+    background: $menu-item-bg;
+    @include Fonts-title(14px,30px,#fff);
+    padding: 8px 15px;
+}
+@mixin button-price{
+    border-radius: 5px;
+    border: 1.5px solid #FFFFFF;
+    @include Fonts-title(18px,28px,#fff);
+
+}
