@@ -52,5 +52,26 @@
     border-radius: 5px;
     border: 1.5px solid #FFFFFF;
     @include Fonts-title(18px,28px,#fff);
-
+}
+@mixin border-bottom($title-font-size,$title-line-height,$color-title-text) {
+    @include Fonts-title($title-font-size,$title-line-height,$color-title-text);
+    &::after{
+    content:'';
+    display:block;
+    width:183px;
+    border-bottom: 6px solid #083C6E;
+    padding-top: 20px;
+    }
+    
+    margin-bottom: 25px;
+}
+@mixin border-bottom-form{
+    &::after{
+        content:'';
+        display:block;
+        margin: 0 auto;
+        width:154px;
+        border-bottom: 6px solid #083C6E;
+        padding-top: 20px;
+        }
 }
