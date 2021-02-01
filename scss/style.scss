@@ -484,7 +484,7 @@ input:active, input:focus {
     padding-bottom: 78px;
     transform: translateY(-50%);
     .support-text {
-
+       max-width: 550px;
 
         .support-title-text {
             padding-top: 75px;
@@ -500,10 +500,12 @@ input:active, input:focus {
         .support-sub {
             text-align: center;
             @include Fonts-subtitle(18px, 28px, $color-subtitle);
-            max-width: 585px;
             padding-bottom: 40px;
         }
     }
+}
+.support-form{
+    max-width: 787px;
 }
 .support-form-space{
     display: flex;
