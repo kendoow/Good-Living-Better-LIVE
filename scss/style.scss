@@ -148,13 +148,16 @@ input[type="submit"] {
     -webkit-appearance: none;
 
 }
-input:active, input:focus {
+
+input:active,
+input:focus {
     outline: none;
-  }
-  input::-moz-focus-inner {
+}
+
+input::-moz-focus-inner {
     border: 0;
-  }
-  
+}
+
 
 .header {
     padding-top: 55px;
@@ -166,10 +169,18 @@ input:active, input:focus {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container-sup{
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+    background: #F8F8F8;
+}
 
 .container-form {
     margin: 0 auto;
     max-width: 780px;
+    padding-bottom: 87px;
+    
 }
 
 
@@ -428,7 +439,7 @@ input:active, input:focus {
 
 // provide
 .provide {
-    margin-bottom: 400px;
+    
 
     .provide-items {
         display: flex;
@@ -480,11 +491,11 @@ input:active, input:focus {
 //support
 .support {
     display: flex;
-    background: #F8F8F8;
     padding-bottom: 78px;
-    transform: translateY(-50%);
+    transform: translateY(50%);
+
     .support-text {
-       max-width: 550px;
+        
 
         .support-title-text {
             padding-top: 75px;
@@ -502,17 +513,19 @@ input:active, input:focus {
             @include Fonts-subtitle(18px, 28px, $color-subtitle);
             padding-bottom: 40px;
         }
+
     }
+
 }
-.support-form{
-    max-width: 787px;
-}
-.support-form-space{
+
+
+.support-form-space {
     display: flex;
     justify-content: space-between;
     background: #FFFFFF;
     border: 1px solid #075DB0;
-    .support-form-field{
+
+    .support-form-field {
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 20px;
@@ -523,20 +536,66 @@ input:active, input:focus {
         line-height: 16px;
         border: none;
         width: 100%;
-        &:placeholder-shown{
+
+        &:placeholder-shown {
             text-transform: uppercase;
         }
-    
+
     }
-    
+
 }
-.support-form-button{
+
+.support-form-button {
     text-transform: uppercase;
     @include Buttons;
     margin-top: 9px;
     margin-right: 9px;
     margin-bottom: 9px;
 }
-.footer{
+
+// footer
+.footer {
     background: #152242;
+    z-index: 1;
+    
+
+    .footer-items {
+        padding-top: 367px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        .footer-title-text {
+            padding-bottom: 30px;
+            @include Fonts-title(18px, 30px, #fff);
+            font-weight:750;
+            &:hover{
+                opacity: 0.7;
+            }    
+        }
+        .footer-item-text{
+            display: flex;
+            padding-bottom: 20px;
+            max-width: 255px;
+            font-weight: 350;
+            @include Fonts-title(18px, 30px, #fff);
+            &:hover{
+                opacity: 0.7;
+            }
+            
+        }
+        .img-footer{
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+        
+    }
+    .footer-icons{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 31px;
+        padding-bottom: 31px;
+        .footer-icon{
+            padding-right: 12px;
+        }
+    }
 }
