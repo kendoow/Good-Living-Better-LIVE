@@ -507,7 +507,7 @@ input::-moz-focus-inner {
                 @include border-bottom-form;
             }
         }
-
+       
         .support-sub {
             text-align: center;
             @include Fonts-subtitle(18px, 28px, $color-subtitle);
