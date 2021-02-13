@@ -224,6 +224,8 @@ input::-moz-focus-inner {
     width: 100%;
     background-size: cover;
     min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .top-intro {
@@ -292,6 +294,8 @@ input::-moz-focus-inner {
 
     .card-thumb {
         box-shadow: 0px 7px 15px rgba(8, 60, 110, 0.1);
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -316,8 +320,10 @@ input::-moz-focus-inner {
 }
 
 .bottom-menu-item {
+    
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $menu-item-bg;
     width: 100%;
     padding-bottom: 12px;
@@ -326,7 +332,6 @@ input::-moz-focus-inner {
     .menu-item-name {
         @include Fonts-title(20px, 30px, #fff);
         margin-left: 13px;
-
     }
 }
 
@@ -427,10 +432,12 @@ input::-moz-focus-inner {
 
         .benefits-card-text {
             .benefits-name {
+                text-align: center;
                 @include Fonts-title(32px, 48px, $color-title-text);
             }
 
             .benefits-decr {
+                text-align: center;
                 @include Fonts-subtitle($subtitle-font-size, $subtitle-line-height, $color-subtitle);
             }
         }
@@ -446,9 +453,17 @@ input::-moz-focus-inner {
         justify-content: space-between;
 
         .provide-img {
+            padding-right: 20px;
             position: relative;
-
+            max-width: 100%;
+            
+            .provide-image{
+                max-width: 100%;
+                min-width: 80%;
+             
+            }
             .provide-sale {
+                max-width: 100%;
                 background: #083C6E;
                 opacity: 0.8;
                 border-radius: 0px 0px 200px 0px;
@@ -598,4 +613,107 @@ input::-moz-focus-inner {
             padding-right: 12px;
         }
     }
+}
+
+@media(max-width:991px){
+    .menu-item-pic{
+        
+        margin-bottom: 20px;
+    }
+    .bottom-menu-item{
+        padding: 0;
+        
+    }
+    .menu-item-name {
+        padding: 0;
+        font-size: 12px !important;
+        line-height: $subtitle-line-height-media !important;
+        margin: 0;
+        
+    }
+    .prefurniture-title {
+        @include Fonts-title(16px, 28px, $color-title-text);
+    }
+    .menu-item-price{
+        margin-right: 2px;
+    }
+
+    .furniture-text{
+        margin-right: 20px;
+    }
+    .furniture-desc {
+        @include Fonts-subtitle($subtitle-font-size-media !important, $subtitle-line-height-media!important, $color-subtitle);
+        
+    }
+    
+    .benefits-cards {
+        
+    
+        .benefits-card {
+            padding-right: 20px;
+            max-width: 200px;
+            display: block;
+            
+            .benefits-img{
+                padding-left: 15%;
+                
+            }
+            .benefits-card-text {
+                .benefits-name {
+                    @include Fonts-title($title-font-size-media, $title-line-height-media, $color-title-text);
+                    padding-bottom: 10px;
+                }
+    
+                .benefits-decr {
+                    @include Fonts-subtitle($subtitle-font-size-media,$subtitle-line-height-media,$color-subtitle);
+                }
+            }
+        }
+    }
+    .provide-sale {
+        max-width: 20% !important;
+        background: #083C6E;
+        opacity: 0.8;
+        border-radius: 0px 0px 200px 0px;
+        top: 0;
+        position: absolute;
+        @include Fonts-title($title-font-size-media !important, $title-line-height-media !important, #fff);
+        padding: 15px 30px 31px 15px !important;
+    }
+    .provide-text{
+        max-width: 300px;
+        text-align: center;
+    }
+}
+@media(max-width:767px){
+    .menu-items{
+        display: block;
+        margin: 0 auto;
+
+    }
+
+
+    .furniture{
+        display: block;
+        .furniture-text{
+            max-width: none;
+            text-align: center;
+            .furniture-main-title{
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+    .furniture-image{
+        padding-top: 40px;
+        margin: 0;
+        display: block;
+        margin: 0 auto;
+    }
+}
+.furniture .furniture-text .furniture-main-title:after{
+    margin: 0 auto;
+}
+@media(max-width:660px){
+
 }
