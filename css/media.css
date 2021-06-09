@@ -1,0 +1,127 @@
+@media (max-width:991px)
+{
+	.menu-item-pic
+	{
+		margin-bottom: 20px;
+	}
+	.bottom-menu-item
+	{
+		padding: 0;
+	}
+	.menu-item-name
+	{
+		font-size: 12px!important;
+		line-height: 20px!important;
+		margin: 0;
+		padding: 0;
+	}
+	.prefurniture-title
+	{
+		color: #000;
+		font-family: Poppins;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 28px;
+	}
+	.menu-item-price
+	{
+		margin-right: 2px;
+	}
+	.furniture-text
+	{
+		margin-right: 20px;
+	}
+	.furniture-desc
+	{
+		color: #B1B6CA;
+		font-family: "Rubik",sans-serif;
+		font-size: 16px!important;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 20px!important;
+	}
+	.benefits-cards .benefits-card
+	{
+		display: block;
+		max-width: 200px;
+		padding-right: 20px;
+	}
+	.benefits-cards .benefits-card .benefits-img
+	{
+		padding-left: 15%;
+	}
+	.benefits-cards .benefits-card .benefits-card-text .benefits-name
+	{
+		color: #000;
+		font-family: Poppins;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 26px;
+		padding-bottom: 10px;
+	}
+	.benefits-cards .benefits-card .benefits-card-text .benefits-decr
+	{
+		color: #B1B6CA;
+		font-family: "Rubik",sans-serif;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 20px;
+	}
+	.provide-sale
+	{
+		background: #083C6E;
+		border-radius: 0px 0px 200px 0px;
+		color: #fff;
+		font-family: Poppins;
+		font-size: 26px!important;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 26px!important;
+		max-width: 20%!important;
+		opacity: 0.8;
+		padding: 15px 30px 31px 15px!important;
+		position: absolute;
+		top: 0;
+	}
+	.provide-text
+	{
+		max-width: 300px;
+		text-align: center;
+	}
+}
+@media (max-width:767px)
+{
+	.menu-items
+	{
+		display: block;
+		margin: 0 auto;
+	}
+	.furniture
+	{
+		display: block;
+	}
+	.furniture .furniture-text
+	{
+		max-width: none;
+		text-align: center;
+	}
+	.furniture .furniture-text .furniture-main-title
+	{
+		text-align: center;
+		width: 100%;
+	}
+	.furniture-image
+	{
+		display: block;
+		margin: 0 auto;
+		margin: 0;
+		padding-top: 40px;
+	}
+}
+.furniture .furniture-text .furniture-main-title:after
+{
+	margin: 0 auto;
+}
